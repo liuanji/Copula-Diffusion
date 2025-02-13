@@ -30,3 +30,7 @@ python sample_conditional.py
 - `--seq-len`: Sequence length.
 - `--sample-type`: Which algorithm to use for sampling (choose from `DCD_autoregressive`, `DCD_chunked`, `autoregressive`, and `sedd`).
 - `--prompt-template`: Defines a list of spans where tokens are given (e.g., `[0.1-0.2][0.5-0.7]`).
+
+### Acknowledgements
+
+This repository is based on [SEDD](https://github.com/louaaron/Score-Entropy-Discrete-Diffusion).
