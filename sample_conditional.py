@@ -26,7 +26,6 @@ def parse_args():
 
     parser.add_argument("--diffusion-model", default="louaaron/sedd-medium", type=str)
     parser.add_argument("--gpt-model", default="gpt2", type=str)
-    parser.add_argument("--batch_size", type=int, default=16)
     parser.add_argument("--steps", type=int, default=8)
     parser.add_argument("--seq-len", type=int, default=128)
     parser.add_argument("--sample-type", type=str, default="DCD_autoregressive")

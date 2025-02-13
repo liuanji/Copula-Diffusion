@@ -155,7 +155,7 @@ def scaled_partial_autoregressive_generation(model, x, ref_probs, target_probs, 
     return x, past_key_values
 
 
-@register_predictor(name="analytic")
+@register_predictor(name="sedd")
 class AnalyticPredictor(Predictor):
     """
     The original sampler from SEDD.
