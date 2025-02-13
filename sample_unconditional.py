@@ -43,7 +43,7 @@ def main():
 
     # Get the sampler
     sampling_fn = sampling.get_combined_sampler(
-        graph, noise, (args.batch_size, args.seq_len), args.sample_type, args.steps, device=device
+        graph, noise, (1, args.seq_len), args.sample_type, args.steps, device=device
     )
 
     # Sample
