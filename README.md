@@ -16,6 +16,16 @@ In the paper, we quantify the performance drop by showing that there is an irred
 
 Since discrete diffusion models learn all univariate marginals well, we use a copula model to additionally capture the dependency information. As shown on the right side of the figure, by combining information from both models, we generate better samples in fewer steps. In particular, by combining a recent discrete diffusion model (https://arxiv.org/pdf/2310.16834) with GPT-2 (small) as the copula model, we achieve better (un)conditioned generation performance in **8-32 fewer denoising steps**.
 
+## 🔧 Installation
+
+Install the conda environment by the following command.
+
+```bash
+conda env create -f environment.yml
+```
+
+If you have trouble installing `flash-attn`, please refer to the [original GitHub repo](https://github.com/Dao-AILab/flash-attention/tree/main) for troubleshooting.
+
 ## 🚀 Draw Conditional Samples
 
 ```py
@@ -31,6 +41,14 @@ python sample_conditional.py
 - `--sample-type`: Which algorithm to use for sampling (choose from `DCD_autoregressive`, `DCD_chunked`, `autoregressive`, and `sedd`).
 - `--prompt-template`: Defines a list of spans where tokens are given (e.g., `[0.1-0.2][0.5-0.7]`).
 
-### Acknowledgements
+## 🚀 Draw Unconditional Samples
+
+```py
+python sample_conditional.py
+```
+
+The arguments are the same except that we do not need `--prompt-template`.
+
+## Acknowledgements
 
 This repository is based on [SEDD](https://github.com/louaaron/Score-Entropy-Discrete-Diffusion).
